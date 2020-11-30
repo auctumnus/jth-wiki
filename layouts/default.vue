@@ -1,20 +1,48 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="w-full max-w-8xl min-h-screen flex flex-col">
+    <Header />
+    <Nuxt class="flex-grow" />
+    <SearchModal />
+    <Footer />
   </div>
 </template>
 
+<script>
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import SearchModal from '@/components/search/SearchModal'
+export default {
+  components: {
+    Header,
+    Footer,
+    SearchModal,
+  },
+  head: {
+    title: 'Jotunnheim Wiki',
+  },
+  mounted() {
+    document.addEventListener('keydown', this.handleKeypress)
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.handleKeypress)
+  },
+  methods: {
+    handleKeypress(e) {
+      if (e.key === '/') {
+        this.$bus.$emit('open-search')
+      } else if (e.key === 'Escape') {
+        this.$bus.$emit('close-search')
+      }
+    },
+  },
+}
+</script>
+
 <style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+html,
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -22,41 +50,17 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-}
+  border: none;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+  @apply bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-100;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+* {
+  @apply transition-colors duration-75;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+a {
+  @apply transition-opacity;
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+a:hover {
+  @apply opacity-75;
 }
 </style>

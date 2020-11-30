@@ -1,4 +1,12 @@
-# jth-wiki-nuxt
+# Project Jotunnheim Wiki
+
+The wiki for the Project Jotunnheim conworld.
+
+## Contributing
+See CONTRIBUTING.md.
+
+## License
+See LICENSE.md.
 
 ## Build Setup
 
