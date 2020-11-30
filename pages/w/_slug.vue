@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex-col lg:flex-row m-4">
-    <TableOfContents class="mb-4 lg:w-1/5" :page="page"></TableOfContents>
+    <TableOfContents
+      class="mb-4 lg:w-52 xl:w-64"
+      :page="page"
+    ></TableOfContents>
     <div class="lg:ml-64 xl:ml-80 flex flex-grow flex-col">
       <article class="prose dark:prose-dark">
         <nuxt-content :document="page" />
