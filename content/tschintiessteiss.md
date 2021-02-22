@@ -9,9 +9,9 @@ tags:
 
 Tschintiessteiss (Natively **Tschörntischee**) is a country located in Northeastern Yazzerland. It is epic and based and will never stop taking Ws. It is commonly abbreviated to "TSC"
 
-#Etymology
+# Etymology
 
-#History
+# History
 
-##Copper War
+## Copper War
 TSC was so based it owned Dhimze by being epic
