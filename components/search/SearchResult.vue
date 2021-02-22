@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    to="/"
+    :to="/w/ + slug"
     class="flex flex-grow flex-row p-4 my-2 items-center select-none dark:bg-gray-600 bg-gray-200 rounded-md"
   >
     <div class="mr-8"><FileDocument :size="36" decorative /></div>
@@ -23,6 +23,10 @@ export default {
       type: String,
       default: 'Search Result',
     },
+    slug: {
+      type: String,
+      default: ''
+    }
   },
 }
 </script>
