@@ -9,6 +9,8 @@ tags:
 
 Tschintiessteiss (Natively **Tschörntischee**) is a country located in Northeastern Yazzerland. It is epic and based and will never stop taking Ws. It is commonly abbreviated to "TSC"
 
+![mogus](https://cdn.discordapp.com/attachments/449275115549491211/813186729828679680/939F9B50219862A1D891A2AF6791F2FA1FD522E9.png)
+
 # Etymology
 
 # History
